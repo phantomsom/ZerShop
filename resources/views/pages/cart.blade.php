@@ -4,7 +4,6 @@
 <html lang="en">
 <!-- Basic -->
 
-<body>
 @section('content')
     <!-- Start All Title Box -->
     <div class="all-title-box">
@@ -175,6 +174,3 @@
         </div>
     </div>
     @endsection
-</body>
-
-</html>

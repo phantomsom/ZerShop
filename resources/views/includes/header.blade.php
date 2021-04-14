@@ -47,7 +47,7 @@
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="#">My Account</a></li>
+                            <li><a href="">My Account</a></li>
                             <li><a href="#">Our location</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
@@ -137,15 +137,15 @@
                         <li class="dropdown active">
                             <a href="/shop" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.html">Cart</a></li>
+                                <li><a href="/cart">Cart</a></li>
                                 <li><a href="/checkout">Checkout</a></li>
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
-                                <li><a href="shop-detail.html">Shop Detail</a></li>
+                                <li><a href="/my-account">My Account</a></li>
+                                <li><a href="/wishlist">Wishlist</a></li>
+                                <li><a href="/shop-detail">Shop Detail</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="service.html">Our Service</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/service">Our Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact-us">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

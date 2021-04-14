@@ -5,8 +5,6 @@
 <!-- Basic -->
 
 @section('content')
-
-<body>
     <!-- Start All Title Box -->
     <div class="all-title-box">
         <div class="container">

@@ -3,10 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
-
 @section('content')
-<body>
-
     <!-- Start All Title Box -->
     <div class="all-title-box">
         <div class="container">
@@ -286,6 +283,4 @@
     </div>
     <!-- End Cart -->
 
-    
-</body>
-@endsection
+    @endsection 

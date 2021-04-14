@@ -46,6 +46,39 @@ Route::get('/cart', function () {
 Route::get('/contact', function () {
     return view('pages/contact');
 });
+
+Route::get('/checkout', function () {
+    return view('pages/checkout');
+});
+
+Route::get('/contact-us', function () {
+    return view('pages/contact-us');
+});
+
+Route::get('/my-account', function () {
+    return view('pages/my-account');
+});
+
+Route::get('/shop-detail', function () {
+    return view('pages/shop-detail');
+});
+
+Route::get('/service', function () {
+    return view('pages/service');
+});
+
+Route::get('/service', function () {
+    return view('pages/service');
+});
+
+Route::get('/wishlist', function () {
+    return view('pages/wishlist');
+});
+
+# A better way to execute the below logic would be to have the above in a controller
+# If we're showing a blog post, it makes sense to call the Controller's function, show
+Route::get('/posts/{post}', [PostsController::class, 'show']);
+
 /*
 # This function accepts a wildcard, called post, we then accept the wildcard to pass it as a key to access a value in the database.
 Route::get('/posts/{post}', function ($post) {
@@ -65,6 +98,3 @@ Route::get('/posts/{post}', function ($post) {
 });
 */
 
-# A better way to execute the above logic would be to have the above in a controller
-# If we're showing a blog post, it makes sense to call the Controller's function, show
-Route::get('/posts/{post}', [PostsController::class, 'show']);

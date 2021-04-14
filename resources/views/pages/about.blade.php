@@ -3,8 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
-
-<body>
 @section('content')
     <!-- Start All Title Box -->
     <div class="all-title-box">
@@ -173,6 +171,3 @@
     </div>
     <!-- End About Page -->
     @endsection
-</body>
-
-</html>
