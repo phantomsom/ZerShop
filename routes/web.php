@@ -36,7 +36,11 @@ Route::get('/about', function () {
 });
 
 Route::get('/shop', function () {
-    return view('pages/shop');
+    $items = App\Models\Item::latest()->get();
+
+    return view('pages/shop', [
+        'items' => $items
+    ]);
 });
 
 Route::get('/cart', function () {
@@ -74,6 +78,8 @@ Route::get('/service', function () {
 Route::get('/wishlist', function () {
     return view('pages/wishlist');
 });
+
+Route::resource('itemCRUD','ItemCRUDController');
 
 # A better way to execute the below logic would be to have the above in a controller
 # If we're showing a blog post, it makes sense to call the Controller's function, show
