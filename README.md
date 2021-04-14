@@ -1,3 +1,5 @@
+<img width="990" alt="ZerShop screenshot" src="https://user-images.githubusercontent.com/19833754/114678863-3e148f00-9d3e-11eb-9ba8-5239c31bec59.png">
+
 ZerShop template obtained from https://www.free-css.com/free-css-templates/page246/thewayshop
 
 ZerShop logo obtained from Wix's logo maker
