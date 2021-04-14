@@ -36,15 +36,26 @@ Route::get('/about', function () {
 });
 
 Route::get('/shop', function () {
+    # Obtain latest and all items from Item database
     $items = App\Models\Item::latest()->get();
 
+    # Return the shop view, and pass in every item object
     return view('pages/shop', [
         'items' => $items
     ]);
 });
 
 Route::get('/cart', function () {
-    return view('pages/cart');
+    # Obtain everything in shopping cart
+    $cartItems = App\Models\ShoppingCart::all();
+
+    if(!empty($cartItems))
+    {
+        # Returns the shopping cart view, while passing in ShoppingCart objects
+        return view('pages/cart', [
+            'cartItems' => $cartItems
+        ]);
+    }
 });
 
 Route::get('/contact', function () {
