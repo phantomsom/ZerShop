@@ -1,3 +1,4 @@
+@inject('ShoppingCartController', 'App\Http\Controllers\ShoppingCartController')
 @extends('layouts.default')
 
 <!DOCTYPE html>
@@ -185,28 +186,28 @@
                                 <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
                                     <div class="row">
                                         @foreach ($items as $item)
-                                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                            <div class="products-single fix">
-                                                <div class="box-img-hover">
-                                                    <div class="type-lb">
-                                                        <p class="{{$item->saleType}}">{{$item->saleType}}</p>
-                                                    </div>
-                                                    <img src="/images/{{$item->image}}" class="img-fluid" alt="Image">
-                                                    <div class="mask-icon">
-                                                        <ul>
-                                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                        </ul>
-                                                        <a class="cart" href="#">Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="why-text">
-                                                    <h4>{{$item->model_name}}</h4>
-                                                    <h5>{{$item->price}}</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                               <div class="products-single fix">
+                                                   <div class="box-img-hover">
+                                                       <div class="type-lb">
+                                                           <p class="{{$item->saleType}}">{{$item->saleType}}</p>
+                                                       </div>
+                                                       <img src="/images/{{$item->image}}" class="img-fluid" alt="Image">
+                                                       <div class="mask-icon">
+                                                           <ul>
+                                                               <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                               <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                               <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                           </ul>
+                                                           <a class="cart" href="{{$ShoppingCartController::AddItemToCart($item)}}">Add to Cart</a>
+                                                       </div>
+                                                   </div>
+                                                   <div class="why-text">
+                                                       <h4>{{$item->model_name}}</h4>
+                                                       <h5>{{$item->price}}</h5>
+                                                   </div>
+                                               </div>
+                                           </div>
                                         @endforeach 
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="list-view">

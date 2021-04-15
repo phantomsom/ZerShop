@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSaleTypeToItemsTable extends Migration
+class ChangeVarcharToIntForPriceInItems extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddSaleTypeToItemsTable extends Migration
     public function up()
     {
         Schema::table('items', function (Blueprint $table) {
-            $table->string('saleType')->nullable();
+            $table->integer('price')->change();
         });
     }
 
@@ -26,7 +26,7 @@ class AddSaleTypeToItemsTable extends Migration
     public function down()
     {
         Schema::table('items', function (Blueprint $table) {
-            $table->dropColumn('saleType');
+            $table->string('price');
         });
     }
 }

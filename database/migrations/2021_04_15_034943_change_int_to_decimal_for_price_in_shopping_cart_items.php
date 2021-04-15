@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSaleTypeToItemsTable extends Migration
+class ChangeIntToDecimalForPriceInShoppingCartItems extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddSaleTypeToItemsTable extends Migration
      */
     public function up()
     {
-        Schema::table('items', function (Blueprint $table) {
-            $table->string('saleType')->nullable();
+        Schema::table('shopping_cart_items', function (Blueprint $table) {
+            $table->decimal('price')->change();
         });
     }
 
@@ -25,8 +25,8 @@ class AddSaleTypeToItemsTable extends Migration
      */
     public function down()
     {
-        Schema::table('items', function (Blueprint $table) {
-            $table->dropColumn('saleType');
+        Schema::table('shopping_cart_items', function (Blueprint $table) {
+            $table->integer('price')->change();
         });
     }
 }
