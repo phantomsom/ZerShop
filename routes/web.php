@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ShoppingCartController;
+use App\Models\ShoppingCart;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,10 +47,9 @@ Route::get('/shop', function () {
     ]);
 });
 
-Route::get('/cart', function () {
+Route::get('/cart', function(){
     # Obtain everything in shopping cart
-    $cartItems = App\Models\ShoppingCart::all();
-
+    $cartItems = ShoppingCart::all();
     if(!empty($cartItems))
     {
         # Returns the shopping cart view, while passing in ShoppingCart objects
@@ -80,11 +81,7 @@ Route::get('/shop-detail', function () {
 
 Route::get('/service', function () {
     return view('pages/service');
-});
-
-Route::get('/service', function () {
-    return view('pages/service');
-});
+}); 
 
 Route::get('/wishlist', function () {
     return view('pages/wishlist');

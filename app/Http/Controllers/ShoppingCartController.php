@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\ShoppingCart;
 
 class ShoppingCartController extends Controller
-{
+{   
     public static function AddItemToCart($item)
     {        
         if($shoppingCartItem = ShoppingCart::select('id')->where('id',$item->productid)->exists())
