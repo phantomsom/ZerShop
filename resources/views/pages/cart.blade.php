@@ -54,7 +54,7 @@
                                         <td class="price-pr">
                                             <p>{{$cartItem->price}}</p>
                                         </td>
-                                        <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                        <td class="quantity-box"><input type="number" size="4" value="{{$cartItem->quantity}}" min="0" step="1" class="c-input-text qty text"></td>
                                         <td class="total-pr">
                                             <p>{{$cartItem->price * $cartItem->quantity}}</p>
                                         </td>

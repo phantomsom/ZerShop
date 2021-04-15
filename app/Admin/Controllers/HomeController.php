@@ -7,15 +7,17 @@ use Encore\Admin\Controllers\Dashboard;
 use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Layout\Row;
+use Encore\Admin\Grid;
 
 class HomeController extends Controller
 {
     public function index(Content $content)
     {
         return $content
-            ->title('Dashboard')
-            ->description('Description...')
+            ->title('Zer Shop, best clothing in town')
+            ->description('Kappa')
             ->row(Dashboard::title())
+
             ->row(function (Row $row) {
 
                 $row->column(4, function (Column $column) {
@@ -29,6 +31,7 @@ class HomeController extends Controller
                 $row->column(4, function (Column $column) {
                     $column->append(Dashboard::dependencies());
                 });
-            });
+            }
+        );
     }
 }

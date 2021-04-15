@@ -10,7 +10,10 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
-
     $router->get('/', 'HomeController@index')->name('home');
-    $router->resource('demo/users', UserController::class);
+    $router->get('/ZerShopSecretPageController', 'ZerShopSecretPageController@index')->name('secretHome');
+    $router->resources([
+        'demo/users' => UserController::class,
+        '/items'=> ItemController::class,
+    ]);
 });

@@ -10,7 +10,8 @@ class ShoppingCartController extends Controller
 {   
     public static function AddItemToCart($item)
     {        
-        if($shoppingCartItem = ShoppingCart::select('id')->where('id',$item->productid)->exists())
+        $shoppingCartItem = ShoppingCart::select('item_unique_id')->where('item_unique_id',$item->item_unique_id);
+        if($shoppingCartItem->exists())
         {
             $shoppingCartItem->increment('quantity');
         }
@@ -18,7 +19,7 @@ class ShoppingCartController extends Controller
         {
             DB::table('shopping_cart_items')->insert(
                 array(
-                 'id' => $item->productid,
+                 'item_unique_id' => $item->item_unique_id,
                  'image' => $item->image,
                  'product_name' => $item->model_name,
                  'price' => $item->price,

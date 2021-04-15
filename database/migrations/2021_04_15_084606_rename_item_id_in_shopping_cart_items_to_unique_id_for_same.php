@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EstablishForeignKeyWithUniqueItemIdInShoppingCartItemsFromItems extends Migration
+class RenameItemIdInShoppingCartItemsToUniqueIdForSame extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class EstablishForeignKeyWithUniqueItemIdInShoppingCartItemsFromItems extends Mi
     public function up()
     {
         Schema::table('shopping_cart_items', function (Blueprint $table) {
-            //
+            $table->renameColumn('itemId', 'item_unique_id');
         });
     }
 
@@ -26,7 +26,8 @@ class EstablishForeignKeyWithUniqueItemIdInShoppingCartItemsFromItems extends Mi
     public function down()
     {
         Schema::table('shopping_cart_items', function (Blueprint $table) {
-            //
+            $table->renameColumn('item_unique_id', 'itemId');
         });
     }
 }
+
