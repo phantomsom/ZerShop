@@ -72,7 +72,6 @@ class ItemController extends AdminController
     protected function form()
     {
         $form = new Form(new Item());
-
         $form->text('brand_name', __('Brand name'));
         $form->text('model_name', __('Model name'));
         $form->decimal('price', __('Price'));
