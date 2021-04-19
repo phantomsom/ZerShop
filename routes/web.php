@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ShoppingCartController;
 use App\Models\ShoppingCart;
-
+use Illuminate\Support\Facades\Config;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,9 +25,13 @@ Route::get('/', function () {
 });
 */
 
+Route::get('/debuglog', function () {
+    echo Config::get('app.url');
+    //echo url('/'); // To get the base url of the website
+});
+
 Route::get('/', function () {
-    echo url('/');
-    //return view('pages/home');
+    return view('pages/home');
 });
 
 Route::get('/home', function () {

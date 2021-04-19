@@ -7,6 +7,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\Facades\Config;
 
 class ItemController extends AdminController
 {
@@ -31,7 +32,7 @@ class ItemController extends AdminController
         $grid->column('model_name', __('Model name'));
         $grid->column('price', __('Price'));
         $grid->column('description', __('Description'));
-        $grid->column('image', __('Image'))->image('http://www.TestProject.test', 100, 100);
+        $grid->column('image', __('Image'))->image(Config::get('app.url'), 100, 100);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
         $grid->column('saleType', __('SaleType'));
