@@ -26,7 +26,8 @@ Route::get('/', function () {
 */
 
 Route::get('/', function () {
-    return view('pages/home');
+    echo url('/');
+    //return view('pages/home');
 });
 
 Route::get('/home', function () {
@@ -85,6 +86,12 @@ Route::get('/service', function () {
 
 Route::get('/wishlist', function () {
     return view('pages/wishlist');
+});
+
+// Below is testing linking to a controller class function
+
+Route::get('/spinningwheel', function () {
+    return view('pages/spinningwheel');
 });
 
 Route::resource('itemCRUD','ItemCRUDController');

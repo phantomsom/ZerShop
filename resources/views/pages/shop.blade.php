@@ -192,7 +192,7 @@
                                                        <div class="type-lb">
                                                            <p class="{{$item->saleType}}">{{$item->saleType}}</p>
                                                        </div>
-                                                       <img src="/images/{{$item->image}}" class="img-fluid" alt="Image">
+                                                       <img src="{{$item->image}}" class="img-fluid" alt="Image">
                                                        <div class="mask-icon">
                                                            <ul>
                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -204,7 +204,7 @@
                                                    </div>
                                                    <div class="why-text">
                                                        <h4>{{$item->model_name}}</h4>
-                                                       <h5>{{$item->price}}</h5>
+                                                       <h5>${{$item->price}}</h5>
                                                    </div>
                                                </div>
                                            </div>
